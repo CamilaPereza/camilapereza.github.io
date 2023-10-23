@@ -1,0 +1,25 @@
+{
+  "name": "Camila Andrea Perez León",
+  "contact_information": {
+    "mail": "",
+    "social_networks": [
+      { "name": "Instagram", "url": "https://www.instagram.com/Kmila_pereza/" },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/camila-andrea-perez-le%C3%B3n-933122219"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "project_name": "El gato andante",
+      "description": "",
+      "url": "https://linktr.ee/elgatoandante"
+    },
+    {
+      "project_name": "Lo lindo de preguntar",
+      "description": "",
+      "url": "https://www.youtube.com/channel/UCeLNrppK1fhSbVA2VHJLsWw"
+    }
+  ]
+}
