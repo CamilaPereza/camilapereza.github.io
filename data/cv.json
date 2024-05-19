@@ -13,12 +13,26 @@
   "projects": [
     {
       "project_name": "El gato andante",
-      "description": "",
+      "description": "Medio de comunicación cultural",
+      "start_date": "2023",
+      "end_date": "",
+      "rol": "Directora de medio",
       "url": "https://linktr.ee/elgatoandante"
     },
     {
+      "project_name": "Babatinta Techotiva",
+      "description": "Editorial de terror independiente",
+      "start_date": "2023",
+      "end_date": "",
+      "rol": "Correción de estilo y ortografía",
+      "url": "https://linktr.ee/babatinta.techotiva"
+    },
+    {
       "project_name": "Lo lindo de preguntar",
-      "description": "",
+      "description": "Medio de comunicación",
+      "start_date": "2020",
+      "end_date": "2023",
+      "rol": "Reportera",
       "url": "https://www.youtube.com/channel/UCeLNrppK1fhSbVA2VHJLsWw"
     }
   ]

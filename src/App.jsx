@@ -4,8 +4,10 @@ import {
   AppBar,
   Box,
   Button,
+  Container,
   CssBaseline,
   Divider,
+  Grid,
   IconButton,
   List,
   ListItem,
@@ -24,12 +26,18 @@ import ProjectsPage from "./pages/projects.page";
 
 import data from "../data/cv.json";
 import "./App.css";
+import LandingPage from "./pages/landing/landing.page";
 
 const defaultTheme = createTheme({
   palette: {
-    primary: { main: "#fff" },
-    background: { default: "#242526" },
+    primary: { main: "#fb7d00" },
+    background: { default: "#000" },
   },
+  // typography: {
+  //   allVariants: {
+  //     color: "#fb7d00",
+  //   },
+  // },
 });
 
 // const navItems = ["Inicio", "Sobre mi", "Contacto", "Proyectos"];
@@ -37,10 +45,20 @@ const defaultTheme = createTheme({
 const { projects, contact_information } = data;
 
 const navItems = [
-  { name: "Inicio", component: <HomePage /> },
-  { name: "Proyectos", component: <ProjectsPage projects={projects} /> },
+  { name: "Inicio", href: "", component: <HomePage /> },
+  {
+    name: "Sobre mi",
+    href: "about",
+    component: <ProjectsPage projects={projects} />,
+  },
+  {
+    name: "Proyectos",
+    href: "projects",
+    component: <ProjectsPage projects={projects} />,
+  },
   {
     name: "Contacto",
+    href: "contact",
     component: <ContactPage contactInformation={contact_information} />,
   },
 ];
@@ -72,32 +90,39 @@ function App() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <CssBaseline />
+      <Container maxWidth={false} disableGutters>
+        <CssBaseline />
 
-      {/* <GlobalStyles styles={{ body: { backgroundColor: "cyan" } }} /> */}
+        {/* <GlobalStyles styles={{ body: { backgroundColor: "cyan" } }} /> */}
 
-      <AppBar component="nav" color="transparent" elevation={0}>
-        <Toolbar>
-          <IconButton
-            color="primary"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item, index) => (
-              <Button key={index} onClick={() => setItemSelected(item)}>
-                {item.name}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-
-      {itemSelected.component}
+        <AppBar component="nav" color="primary" elevation={0}>
+          <Toolbar>
+            <IconButton
+              color="primary"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" } }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              {navItems.map((item, index) => (
+                <Button
+                  key={index}
+                  href={`#${item.href}`}
+                  // color="secondary"
+                  sx={{ color: "black", fontWeight: "bold" }}
+                  onClick={() => setItemSelected(item)}
+                >
+                  {item.name}
+                </Button>
+              ))}
+            </Box>
+          </Toolbar>
+        </AppBar>
+        <LandingPage contactInformation={contact_information} />
+      </Container>
     </ThemeProvider>
   );
 }
