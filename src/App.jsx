@@ -6,14 +6,14 @@ import {
   Button,
   Container,
   CssBaseline,
-  Divider,
+  Drawer,
   IconButton,
   List,
   ListItem,
   ListItemButton,
+  ListItemText,
   ThemeProvider,
   Toolbar,
-  Typography,
   createTheme,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -61,6 +61,8 @@ const navItems = [
   },
 ];
 
+const drawerWidth = 240;
+
 function App() {
   const [itemSelected, setItemSelected] = useState(navItems[0]);
 
@@ -69,16 +71,27 @@ function App() {
   const handleDrawerToggle = () => setMobileOpen((prevState) => !prevState);
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        textAlign: "center",
+        backgroundColor: "#fb7d00",
+        height: "100%",
+      }}
+    >
+      {/* <Typography variant="h6" sx={{ my: 2 }}>
+        Menú
       </Typography>
-      <Divider />
+      <Divider /> */}
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              {/* <ListItemText primary={item} /> */}
+          <ListItem key={item.name} disablePadding>
+            <ListItemButton href={`#${item.href}`} sx={{ textAlign: "center" }}>
+              <ListItemText
+                primary={item.name}
+                color="#000"
+                disableTypography
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -96,7 +109,7 @@ function App() {
         <AppBar component="nav" color="primary" elevation={0}>
           <Toolbar>
             <IconButton
-              color="primary"
+              color="inherit"
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
@@ -119,6 +132,25 @@ function App() {
             </Box>
           </Toolbar>
         </AppBar>
+
+        <nav>
+          <Drawer
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{ keepMounted: true }}
+            sx={{
+              display: { xs: "block", sm: "none" },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
+              },
+            }}
+          >
+            {drawer}
+          </Drawer>
+        </nav>
+
         <LandingPage contactInformation={contact_information} />
       </Container>
     </ThemeProvider>
