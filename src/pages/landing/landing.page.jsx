@@ -2,14 +2,20 @@ import { Box, Grid, Link, Typography } from "@mui/material";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import DeleteIcon from "@mui/icons-material/Delete";
 
 import ProjectComponent from "../../components/project.component";
 
 import data from "../../../data/cv.json";
 import "./landing.css";
+import image from "../../assets/img/banner-1.jfif";
 
-const { projects, contact_information: contactInformation } = data;
+const {
+  name,
+  profession,
+  profile_descciption,
+  projects,
+  contact_information: contactInformation,
+} = data;
 
 const LandingPage = () => {
   const icons = [
@@ -30,16 +36,35 @@ const LandingPage = () => {
     <>
       <Box className="welcome-section">
         <Typography variant="h4" color={"primary"} my={3} fontWeight={"bold"}>
-          Camila Pérez León
+          {name}
         </Typography>
         <Typography variant="body1" color={"primary"}>
-          Comunicadora social y periodista
+          {profession}
         </Typography>
       </Box>
 
       <Box className="welcome-section" id="about">
-        <Typography>Sobre mi</Typography>
-        <Typography>Comunicadora social y periodista</Typography>
+        <Grid
+          container
+          justifyContent={"space-around"}
+          alignItems={"center"}
+          sx={{ padding: 2, minHeight: "100%" }}
+        >
+          <Grid
+            item
+            md={5}
+            xs={12}
+            justifyContent={"left"}
+            textAlign={"justify"}
+            my={4}
+          >
+            <Typography variant="h4">Sobre mi</Typography>
+            <Typography>{profile_descciption} </Typography>
+          </Grid>
+          <Grid item md={6} xs={12} padding={0} sx={{ height: "65vh" }}>
+            <img className="about-section__image" src={image} />
+          </Grid>
+        </Grid>
       </Box>
 
       <Box className="welcome-section" id="projects">
