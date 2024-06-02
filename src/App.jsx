@@ -7,12 +7,10 @@ import {
   Container,
   CssBaseline,
   Divider,
-  Grid,
   IconButton,
   List,
   ListItem,
   ListItemButton,
-  ListItemText,
   ThemeProvider,
   Toolbar,
   Typography,
@@ -33,11 +31,11 @@ const defaultTheme = createTheme({
     primary: { main: "#fb7d00" },
     background: { default: "#000" },
   },
-  // typography: {
-  //   allVariants: {
-  //     color: "#fb7d00",
-  //   },
-  // },
+  typography: {
+    allVariants: {
+      color: "#fb7d00",
+    },
+  },
 });
 
 // const navItems = ["Inicio", "Sobre mi", "Contacto", "Proyectos"];

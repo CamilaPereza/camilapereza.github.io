@@ -4,7 +4,41 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  /* background-color: #ff0; */
+  min-height: 100vh;
   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+#contact {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  background-color: var(--main-gray);
+  height: 100vh;
+}
+
+#contact h2 {
+  font-size: 30pt;
+}
+
+.contact-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  font-size: inherit;
+  transition: font-size ease-in 0.7s;
+}
+
+.contact-details:hover {
+  font-size: 25pt;
 }
