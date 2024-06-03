@@ -20,7 +20,7 @@
       "end_date": "",
       "rol": "Directora de medio",
       "url": "https://linktr.ee/elgatoandante",
-      "url_image": "gato_andante.jpg"
+      "url_image": "src/assets/img/project_images/gato_andante.jpg"
     },
     {
       "project_name": "Babatinta Techotiva",
@@ -29,7 +29,7 @@
       "end_date": "",
       "rol": "Correción de estilo y ortografía",
       "url": "https://linktr.ee/babatinta.techotiva",
-      "url_image": "babatinta.jpg"
+      "url_image": "src/assets/img/project_images/babatinta.jpg"
     },
     {
       "project_name": "Lo lindo de preguntar",
@@ -38,7 +38,7 @@
       "end_date": "2023",
       "rol": "Reportera",
       "url": "https://www.youtube.com/channel/UCeLNrppK1fhSbVA2VHJLsWw",
-      "url_image": "lindo_preguntar.jpg"
+      "url_image": "src/assets/img/project_images/lindo_preguntar.jpg"
     }
   ]
 }

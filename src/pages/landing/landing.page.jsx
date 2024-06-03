@@ -8,7 +8,6 @@ import ProjectComponent from "../../components/project.component";
 import data from "../../../data/cv.json";
 import "./landing.css";
 import image from "../../assets/img/banner-1.jfif";
-import { projectImages } from "../../common/constants";
 
 const {
   name,
@@ -17,13 +16,6 @@ const {
   projects,
   contact_information: contactInformation,
 } = data;
-
-const projectsToShow = projects.map((project) => ({
-  ...project,
-  url_image: projectImages.find(
-    (projectImage) => projectImage.project_name === project.project_name
-  ).image,
-}));
 
 const socialNetworkIcons = [
   { name: "Instagram", icon: <InstagramIcon fontSize="inherit" /> },
@@ -80,7 +72,7 @@ const LandingPage = () => {
           Algunos de mis proyectos
         </Typography>
         <Grid container spacing={2} justifyContent={"center"}>
-          {projectsToShow.map((project, index) => (
+          {projects.map((project, index) => (
             <Grid item key={index}>
               <ProjectComponent project={project} />
             </Grid>
