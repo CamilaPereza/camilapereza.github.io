@@ -1,7 +1,7 @@
 {
   "name": "Camila Andrea Perez León",
   "profession": "Comunicadora social y periodista",
-  "profile_descciption": "Estudiante de Comunicación social y periodismo de la Universidad Distrital Francisco Jose de Caldas, parte del medio de periodismo   cultural “El Gato Andante” y miembro de la mesa editorial de Baba   Tinta Techotiva Miembro del grupo de cuentería de la Universidad Distrital.",
+  "profile_descciption": "Estudiante de Comunicación social y periodismo de la Universidad Distrital Francisco Jose de Caldas, parte del medio de periodismo cultural “El Gato Andante” y miembro de la mesa editorial de Baba Tinta Techotiva. Miembro del grupo de cuentería de la Universidad Distrital.",
   "contact_information": {
     "mail": "",
     "social_networks": [
@@ -19,7 +19,8 @@
       "start_date": "2023",
       "end_date": "",
       "rol": "Directora de medio",
-      "url": "https://linktr.ee/elgatoandante"
+      "url": "https://linktr.ee/elgatoandante",
+      "url_image": "gato_andante.jpg"
     },
     {
       "project_name": "Babatinta Techotiva",
@@ -27,7 +28,8 @@
       "start_date": "2023",
       "end_date": "",
       "rol": "Correción de estilo y ortografía",
-      "url": "https://linktr.ee/babatinta.techotiva"
+      "url": "https://linktr.ee/babatinta.techotiva",
+      "url_image": "babatinta.jpg"
     },
     {
       "project_name": "Lo lindo de preguntar",
@@ -35,7 +37,8 @@
       "start_date": "2020",
       "end_date": "2023",
       "rol": "Reportera",
-      "url": "https://www.youtube.com/channel/UCeLNrppK1fhSbVA2VHJLsWw"
+      "url": "https://www.youtube.com/channel/UCeLNrppK1fhSbVA2VHJLsWw",
+      "url_image": "lindo_preguntar.jpg"
     }
   ]
 }

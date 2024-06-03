@@ -8,6 +8,7 @@ import ProjectComponent from "../../components/project.component";
 import data from "../../../data/cv.json";
 import "./landing.css";
 import image from "../../assets/img/banner-1.jfif";
+import { projectImages } from "../../common/constants";
 
 const {
   name,
@@ -17,19 +18,26 @@ const {
   contact_information: contactInformation,
 } = data;
 
-const LandingPage = () => {
-  const icons = [
-    { name: "Instagram", icon: <InstagramIcon fontSize="inherit" /> },
-    { name: "LinkedIn", icon: <LinkedInIcon fontSize="inherit" /> },
-    // TODO: check another social networks
-    // { name: "Twitter", icon: <InstagramIcon /> },
-    // { name: "Github", icon: LinkedInIcon },
-  ];
+const projectsToShow = projects.map((project) => ({
+  ...project,
+  url_image: projectImages.find(
+    (projectImage) => projectImage.project_name === project.project_name
+  ).image,
+}));
 
+const socialNetworkIcons = [
+  { name: "Instagram", icon: <InstagramIcon fontSize="inherit" /> },
+  { name: "LinkedIn", icon: <LinkedInIcon fontSize="inherit" /> },
+  // TODO: check another social networks
+  // { name: "Twitter", icon: <InstagramIcon /> },
+  // { name: "Github", icon: LinkedInIcon },
+];
+
+const LandingPage = () => {
   const contactInformationComponentList =
     contactInformation.social_networks.map((network) => ({
       ...network,
-      icon: icons.find((icon) => icon.name === network.name)?.icon,
+      icon: socialNetworkIcons.find((icon) => icon.name === network.name)?.icon,
     }));
 
   return (
@@ -72,7 +80,7 @@ const LandingPage = () => {
           Algunos de mis proyectos
         </Typography>
         <Grid container spacing={2} justifyContent={"center"}>
-          {projects.map((project, index) => (
+          {projectsToShow.map((project, index) => (
             <Grid item key={index}>
               <ProjectComponent project={project} />
             </Grid>

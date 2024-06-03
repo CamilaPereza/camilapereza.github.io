@@ -3,9 +3,12 @@ import {
   Card,
   CardContent,
   CardHeader,
+  CardMedia,
   IconButton,
   Typography,
 } from "@mui/material";
+
+import defaultImage from "../assets/img/project_images/default.jpg";
 
 const ProjectComponent = ({ project }) => {
   return (
@@ -18,6 +21,11 @@ const ProjectComponent = ({ project }) => {
         color: "#fb7d00",
       }}
     >
+      <CardMedia
+        sx={{ height: "100px" }}
+        image={project.url_image || defaultImage}
+        title={`${project.project_name} image`}
+      />
       <CardHeader
         title={project.project_name}
         subheader={
