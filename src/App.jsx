@@ -25,16 +25,15 @@ import ProjectsPage from "./pages/projects.page";
 import data from "../data/cv.json";
 import "./App.css";
 import LandingPage from "./pages/landing/landing.page";
+import { backgroundColor, primaryColor } from "./common/constants";
 
 const defaultTheme = createTheme({
   palette: {
-    primary: { main: "#fb7d00" },
-    background: { default: "#000" },
+    primary: { main: primaryColor },
+    background: { default: backgroundColor },
   },
   typography: {
-    allVariants: {
-      color: "#fb7d00",
-    },
+    allVariants: { color: primaryColor },
   },
 });
 
@@ -75,7 +74,7 @@ function App() {
       onClick={handleDrawerToggle}
       sx={{
         textAlign: "center",
-        backgroundColor: "#fb7d00",
+        backgroundColor: primaryColor,
         height: "100%",
       }}
     >
@@ -89,7 +88,7 @@ function App() {
             <ListItemButton href={`#${item.href}`} sx={{ textAlign: "center" }}>
               <ListItemText
                 primary={item.name}
-                color="#000"
+                color={backgroundColor}
                 disableTypography
               />
             </ListItemButton>

@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 
 import defaultImage from "../assets/img/project_images/default.jpg";
+import { primaryColor } from "../common/constants";
 
 const ProjectComponent = ({ project }) => {
   return (
@@ -16,9 +17,9 @@ const ProjectComponent = ({ project }) => {
       sx={{
         minWidth: "300px",
         textAlign: "justify",
-        border: "2px solid #fb7d00",
+        border: `2px solid ${primaryColor}`,
         backgroundColor: "transparent",
-        color: "#fb7d00",
+        color: primaryColor,
       }}
     >
       <CardMedia

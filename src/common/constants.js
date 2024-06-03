@@ -8,3 +8,6 @@ export const projectImages = [
   { project_name: "Babatinta Techotiva", image: babatinta },
   { project_name: "Lo lindo de preguntar", image: lindo_preguntar },
 ];
+
+export const primaryColor = "#fb7d00";
+export const backgroundColor = "#000";
