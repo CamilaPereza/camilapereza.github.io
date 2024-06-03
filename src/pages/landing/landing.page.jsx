@@ -2,6 +2,8 @@ import { Box, Grid, Link, Typography } from "@mui/material";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import XIcon from "@mui/icons-material/X";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 import ProjectComponent from "../../components/project.component";
 
@@ -21,8 +23,8 @@ const socialNetworkIcons = [
   { name: "Instagram", icon: <InstagramIcon fontSize="inherit" /> },
   { name: "LinkedIn", icon: <LinkedInIcon fontSize="inherit" /> },
   // TODO: check another social networks
-  // { name: "Twitter", icon: <InstagramIcon /> },
-  // { name: "Github", icon: LinkedInIcon },
+  { name: "Twitter", icon: <XIcon fontSize="inherit" /> },
+  { name: "Github", icon: <GitHubIcon fontSize="inherit" /> },
 ];
 
 const LandingPage = () => {
